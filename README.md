@@ -1,35 +1,69 @@
 # VLSI-LAB-EXP-6
 # SCHEMATIC ENTRY AND SIMULATION OF CMOS INVERTER, CMOS NAND and CMOS NOR USING CADENCE TOOL
 
-**AIM:** To simulate the CMOS inverter, CMOS NAND and CMOS NOR using cadence tool.
+**AIM:** To design and simulate the CMOS inverter and observe the DC and Transientresponse using cadence tool.
+
 **APPARATUS REQUIRED:**  
+
 Laptop with MobaXterm
 Cadence tool
-PROCEDURE SCHEMATIC ENTRY: Creating a new library:
-In the library manager, execute File - New library. The new library form appears.
-In the new library form, type ‘my design lib’ in the name section.
-In the field of directory section, verify that the path to the library is set to ~/Database / Cadence- analog – lab –bl3 and click ok.
-In the next ‘technology file for new library form select option attach to an existing tech file and click ok.
-In the ‘attach design library to technology file’ form, select gpdk045 form the cyclic field and click ok.
-After creating a new library you can verify it from the library manager.
-If you right click on the ‘my design lib’ and select properties, you will find that gpdk045 library is attached as techlib to ‘my design lib’.
-Creating a schematic cell view:
 
-In the CIW or library manager, execute file – new – cell viw.
-Setup the new file form as follows, Do not edit the library path file and the above might be different from the path shown in your form.
-Click ok when done the above setting. A black schematic window for the inverter design appears.
-Adding components to schematic:
+**PROCEDURE :**
 
-In the inverter schematic window, click the instance fixed menu icon to display the add instance form.
-Click on the browse button. This opens up a library browser from which you can select components and the symbol view.
-After you complete the add instance form move your cursor to the schematic window and click left to place a component. LIBRARY NAME CELL NAME gpdk045 PMOS gpdk045 NMOS
-This is a table of components for building the inverter schematic.
-After entering components, click cancel in the add instance form or press ESC with your cursor in the schematic window.
+1.Open Vivado: Launch Xilinx Vivado software on your computer.
+2.Create a New Project: Click on "Create Project" from the welcome page or navigate through "File"
+> "Project" > "New".
+3.Project Settings: Follow the prompts to set up your project. Specify the project name, location,
+and select RTL project type.
+4.Add Design Files: Add your Verilog design files to the project. You can do this by right-clicking on
+"Design Sources" in the Sources window, then selecting "Add Sources". Choose your Verilog files
+from the file browser.
+5.Specify Simulation Settings: Go to "Simulation" > "Simulation Settings". Choose your simulation
+language (Verilog in this case) and simulation tool (Vivado Simulator).
+6.Run Simulation: Go to "Flow" > "Run Simulation" > "Run Behavioral Simulation". This will launch
+the Vivado Simulator and compile your design for simulation.
+7.Set Simulation Time: In the Vivado Simulator window, set the simulation time if it's not set
+automatically. This determines how long the simulation will run.
+8.Run Simulation: Start the simulation by clicking on the "Run" button in the simulation window.
+9.View Results: After the simulation completes, you can view waveforms, debug signals, and analyze
+the behavior of your design.
+**SCHEMATIC ENTRY :**
+ 
+**Creating a new library:**
+
+1.In the library manager, execute File - New library. The new library form appears.
+2.In the new library form, type ‘my design lib’ in the name section.
+3.In the field of directory section, verify that the path to the library is set to ~/Database / Cadence-
+analog – lab –bl3 and click ok.
+4.In the next ‘technology file for new library form select option attach to an existing tech file and
+click ok.
+5.In the ‘attach design library to technology file’ form, select gpdk045 form the cyclic field and click
+ok.
+6.After creating a new library you can verify it from the library manager.
+7.If you right click on the ‘my design lib’ and select properties, you will find that gpdk045 library is
+attached as techlib to ‘my design lib’.
+Creating a schematic cell view :
+1.In the CIW or library manager, execute file – new – cell viw.
+2.Setup the new file form as follows, Do not edit the library path file and the above might be
+different from the path shown in your form.
+3.Click ok when done the above setting. A black schematic window for the inverter design appears.
+
+**Adding components to schematic:**
+
+1.In the inverter schematic window, click the instance fixed menu icon to display the add instance
+form.
+2.Click on the browse button. This opens up a library browser from which you can select
+components and the symbol view.
+3.After you complete the add instance form move your cursor to the schematic window and click
+left to place a component. LIBRARY NAME CELL NAME gpdk045 PMOS gpdk045 NMOS
+4.This is a table of components for building the inverter schematic.
+5.After entering components, click cancel in the add instance form or press ESC with your cursor in
+the schematic window.
 
 ![image](https://github.com/Logesh-KS/VLSI-LAB-EXP-6/assets/113246318/a91808f3-7396-4372-b8a7-cd6f16681a3c)
 
 
-Adding pins to schematic:
+**Adding pins to schematic:**
 
 Click the pin fixed menu icon in the schematic window. You can execute create pin or press ‘p’.
 Add pin form appears. Type the following in the ADD pin form in the next order leaving space between the pin. PIN NAMES DIRECTION Vin,Vdd,Vss Input Vout Output
@@ -40,7 +74,7 @@ Follow the prompts at the bottom of design window and click left on the destinat
 Complete the wiring as shown in the figure and when done wiring press ECS key in the schematic window to cancel wiring.
 Saving the design: Click the check and save icon in the schematic editor window observe CIW output for any errors.
 
-BUILDING THE INVERTER TEST DESIGN: Creating the inverter test cell view:
+**BUILDING THE INVERTER TEST DESIGN: Creating the inverter test cell view:**
 
 In the CIW or library manager, execute file – new – cell view.
 Setup the newfile as shown below.
@@ -53,7 +87,7 @@ Click on the check and save icon to save the design.
 
 ![image](https://github.com/Logesh-KS/VLSI-LAB-EXP-6/assets/113246318/dbc9f50e-28de-426a-8a16-899267da9ecc)
 
-ANALOG SIMULATION WITH SPECTRA: Starting the simulation environment:
+**ANALOG SIMULATION WITH SPECTRA: Starting the simulation environment:**
 
 In the Inverter-test schematic window execute launch – ADEL. The variable virtuoso analog design environment (ADE) simulation window appears. Choosing a simulator:
 In the simulation window (ADE) execute setup – simulator / directory / host.
@@ -76,36 +110,36 @@ When the simulation finishes the transient and DC plots automatically will be po
 
 ![image](https://github.com/Logesh-KS/VLSI-LAB-EXP-6/assets/113246318/451241a0-510e-450c-99dd-035eb6b7f500)
 
-CMOS NAND GATE
+**CMOS NAND GATE**
 
-NAND SCHEMATIC
+**NAND SCHEMATIC**
 
 ![image](https://github.com/Logesh-KS/VLSI-LAB-EXP-6/assets/113246318/18c63cf5-417f-46fc-a3a5-330847007bbb)
 
-NAND TEST CELL VIEW
+**NAND TEST CELL VIEW**
 
 ![image](https://github.com/Logesh-KS/VLSI-LAB-EXP-6/assets/113246318/07bea821-9212-4fb4-aa28-2f6eb33d8afb)
 
-NAND SIMULATION WITH SPECTRA
+**NAND SIMULATION WITH SPECTRA**
 
 ![image](https://github.com/Logesh-KS/VLSI-LAB-EXP-6/assets/113246318/5413e719-3c98-48db-ac28-bdd7ab4b24af)
 
-CMOS NOR GATE
+**CMOS NOR GATE**
 
-NOR SCHEMATIC
+**NOR SCHEMATIC**
 
 ![image](https://github.com/Logesh-KS/VLSI-LAB-EXP-6/assets/113246318/5f9d8371-12be-43af-bfd4-afa2134627a7)
 
 
-NOR TEST CELL VIEW
+**NOR TEST CELL VIEW**
 
 ![image](https://github.com/Logesh-KS/VLSI-LAB-EXP-6/assets/113246318/dbf37cf9-b089-419f-8e46-6da0b7a3cbca)
 
-NOR SIMULATION WITH SPECTRA
+**NOR SIMULATION WITH SPECTRA**
 
 ![image](https://github.com/Logesh-KS/VLSI-LAB-EXP-6/assets/113246318/d99caea3-4bdf-4467-9f0f-bb0de8e2e96b)
 
-RESULT: THe design and simulation of the CMOS inverter and the DC and transient responses using cadence tool is successfully observed and verified.
+**RESULT:** THe design and simulation of the CMOS inverter and the DC and transient responses using cadence tool is successfully observed and verified.
 
 
 
